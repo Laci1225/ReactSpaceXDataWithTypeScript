@@ -1,5 +1,6 @@
 import {JSX} from "react"
 import {Launch} from "../models/launch";
+import {Link} from "react-router-dom";
 
 
 interface LaunchItemProps {
@@ -12,6 +13,8 @@ export default function LaunchItem({launch}: LaunchItemProps): JSX.Element {
         {launch.details && (
             <p>{launch.details ?? "No details yet"}</p>)
         }
-        <a href={`/launch/${launch.id}`}>Show details</a>
+        <Link to={`/launches/  ${launch.id}`}>Show details</Link>
     </div>)
 }
+
+//react router

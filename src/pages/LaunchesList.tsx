@@ -1,10 +1,9 @@
-import './App.css'
-import LaunchItem from "./component/LaunchItem";
+import LaunchItem from "../component/LaunchItem";
 import {useEffect, useState} from "react";
-import {getAllLaunches} from "./api/launch";
-import {Launch} from "./models/launch";
+import {getAllLaunches} from "../api/launch";
+import {Launch} from "../models/launch";
 
-function App() {
+function LaunchesList() {
     const [launches, setLaunches] = useState<Launch[]>();
     useEffect(() => {
         getAllLaunches().then(data => {
@@ -20,4 +19,4 @@ function App() {
     )
 }
 
-export default App
+export default LaunchesList;
