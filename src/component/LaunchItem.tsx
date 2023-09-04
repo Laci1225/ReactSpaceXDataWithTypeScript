@@ -13,7 +13,7 @@ export default function LaunchItem({launch}: LaunchItemProps): JSX.Element {
         {launch.details && (
             <p>{launch.details ?? "No details yet"}</p>)
         }
-        <Link to={`/launches/  ${launch.id}`}>Show details</Link>
+        <Link to={`/launches/${launch.id}`}>Show details</Link>
     </div>)
 }
 
